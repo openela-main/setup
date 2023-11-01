@@ -1,0 +1,13 @@
+diff --git a/lang.csh b/lang.csh
+index 94c4625..4e5f014 100644
+--- a/lang.csh
++++ b/lang.csh
+@@ -13,7 +13,7 @@ foreach config (/etc/locale.conf "${HOME}/.i18n")
+ end
+ 
+ if (${?LANG_backup}) then
+-    set LANG="${LANG_backup}"
++    setenv LANG "${LANG_backup}"
+ endif
+ 
+ unset LANG_backup config
